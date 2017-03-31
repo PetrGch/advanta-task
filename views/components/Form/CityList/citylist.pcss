@@ -1,0 +1,45 @@
+.list {
+    height: 224px;
+    overflow: hidden;
+
+    &__item {
+        padding: 6px 6px 6px 10px;
+        font-size: 14px;
+        list-style: none;
+        transition: all 0.1s ease-in-out;
+        cursor: pointer;
+
+        &_active, &:hover {
+            background-color: $bluehover;
+            color: $white;
+        }
+
+        &_selected, &_selected:hover {
+            background-color: $buttonbg;
+            color: $listText;
+        }
+    }
+
+    &_display-none {
+        display: none;
+    }
+
+    &-message {
+        padding: 10px;
+        color: $listText;
+
+        &__item {
+            display: block;
+
+            &_search, &_notfound {
+                &-none {
+                    display: none;
+                }
+            }
+        }
+
+        &_display-none {
+            display: none;
+        }
+    }
+}
