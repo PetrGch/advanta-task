@@ -1,7 +1,6 @@
 import { Router, browserHistory } from 'react-router'
 import router from './router';
-import './index.css';
-
+import './index.pcss';
 
 ReactDOM.render(
     <Router routes={router} history={browserHistory} />,

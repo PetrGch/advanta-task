@@ -4,15 +4,10 @@
 
 ```
 {
-    city: [],
-    dropDownList: false,
-    isFetching: false,
-    filter: '',
+    data: [],
+    render: false,
+    spinner: '',
     error: false,
-    success: false,
-    
-    length: false,
-    
-    selectedCity: ''
+    selectedId: null
 }
 ```

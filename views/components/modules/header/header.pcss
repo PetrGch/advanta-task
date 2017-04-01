@@ -1,0 +1,48 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 140px;
+    background: $graydark;
+    font-size: 30px;
+    text-transform: uppercase;
+    border-bottom: 4px solid $yellow;
+    &::after, &::before {
+        content: '';
+        position: absolute;
+        bottom: -40px;
+        width: 0;
+        height: 0;
+        border-top: 40px solid $yellow;
+    }
+    &::after {
+        right: 0;
+        border-left: 40px solid transparent;
+    }
+    &::before {
+        left: 0;
+        border-right: 40px solid transparent;
+    }
+    &__logo {
+        width: 290px;
+        height: 50px;
+        color: $blueviolet;
+        & span {
+            display: block;
+            float: left;
+        }
+        &_part-one {
+            line-height: 50px;
+            font-size: 60px;
+        }
+        &_part-two {
+            font-size: 25px;
+            margin: 2px 0 4px;
+        }
+        &_part-three {
+            font-size: 25px;
+        }
+    }
+}

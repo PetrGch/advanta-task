@@ -1,6 +1,8 @@
 import { Provider } from 'react-redux';
-import AutocomplieCity from '../../container/AutocompliteCity';
-import configureStore from '../../redux/store/configureStore'
+import configureStore from '../../redux/store/configureStore';
+
+import Header from '../modules/header/Header';
+import Footer from '../modules/footer/Footer';
 
 const store = configureStore();
 
@@ -8,11 +10,19 @@ export default class App extends React.Component {
     render() {
         return (
             <Provider store={store}>
-                <div className='form-wrap'>
-                    <AutocomplieCity />
+                <div>
+                    <Header/>
+
+                    {this.props.children}
+
+                    <Footer/>
                 </div>
             </Provider>
         );
     }
 }
+
+App.propTypes = {
+    children: React.PropTypes.object
+};
 

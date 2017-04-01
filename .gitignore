@@ -1,4 +1,8 @@
 node_modules
 .idea
-
-
+public/data
+public/img
+public/index.css
+public/index.js
+npm-debug.log
+*.map

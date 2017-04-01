@@ -10,7 +10,7 @@ const appRoot = require('app-root-path');
 
 //routers
 const index = require('./routes/index');
-const city = require('./routes/city');
+const city = require('./routes/data');
 
 const app = express();
 
@@ -24,7 +24,7 @@ app.use(logger('dev'));
 app.use(express.static('public'));
 
 app.get('/', index);
-app.get('/city', city);
+app.get('/api', city);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
