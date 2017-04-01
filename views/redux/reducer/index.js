@@ -1,11 +1,8 @@
 import { combineReducers } from 'redux';
-import checkLenght from './validation';
-import getCity from './city';
-import selectCity from './control';
+
+import { getData } from './data';
 
 export default combineReducers({
-    getCity,
-    checkLenght,
-    selectCity
+    getData
 });
 

@@ -6,12 +6,11 @@ const url = require('url');
 const readHtmlFile = require('./stream');
 const router = express.Router();
 
-
 /* GET city data. */
-router.get('/city', function(req, res) {
-    var urlPars = url.parse(req.url, true);
-    if (urlPars.query.data === 'city') {
-        let filePath = path.join('backend', 'data', 'kladr.json');
+router.get('/api', function(req, res) {
+    let urlPars = url.parse(req.url, true);
+    if (urlPars.query.data === 'data') {
+        let filePath = path.join('backend', 'data', 'data.json');
         res.statusCode = 200;
         readHtmlFile(filePath, res);
     } else {

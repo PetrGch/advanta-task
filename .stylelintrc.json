@@ -4,6 +4,10 @@
         "indentation": 4,
         "value-list-comma-space-after": "never-single-line",
         "selector-list-comma-newline-after": "never-multi-line",
-        "block-opening-brace-newline-before": "never-single-line"
+        "block-opening-brace-newline-before": "never-single-line",
+        "declaration-empty-line-before": "never",
+        "rule-empty-line-before": "never",
+        "comment-empty-line-before": "never",
+        "at-rule-empty-line-before": "never"
     }
 }

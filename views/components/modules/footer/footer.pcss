@@ -1,0 +1,22 @@
+.footer {
+    position: relative;
+    height: 100px;
+    background: $graydark;
+    border-top: 4px solid $yellow;
+    &::after, &::before {
+        content: '';
+        position: absolute;
+        top: -40px;
+        width: 0;
+        height: 0;
+        border-bottom: 40px solid $yellow;
+    }
+    &::after {
+        right: 0;
+        border-left: 40px solid transparent;
+    }
+    &::before {
+        left: 0;
+        border-right: 40px solid transparent;
+    }
+}

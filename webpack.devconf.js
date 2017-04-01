@@ -56,7 +56,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
+                test: /\.pcss$/,
                 loader: ExtractTextPlugin.extract({ fallback: 'style', use: 'css?importLoaders=1!postcss-loader' })
             },
             {
@@ -69,7 +69,7 @@ module.exports = {
     plugins: [
         new webpack.NoEmitOnErrorsPlugin(),
         new ExtractTextPlugin("[name].css"),
-        new webpack.HotModuleReplacementPlugin(),
+        // new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             NODE_ENV: JSON.stringify(NODE_ENV)
         }),
@@ -81,18 +81,18 @@ module.exports = {
         })
     ],
 
-    devServer: {
-        host: 'localhost',
-        port: 3001,
-        contentBase: pathResolve('public'),
-        publicPath: '/',
-        hot: true,
-        inline: true,
-        watchOptions: {
-            aggregateTimeout: 100,
-            ignored: /node_modules/
-        }
-    },
+    // devServer: {
+    //     host: 'localhost',
+    //     port: 3001,
+    //     contentBase: pathResolve('public'),
+    //     publicPath: '/',
+    //     hot: true,
+    //     inline: true,
+    //     watchOptions: {
+    //         aggregateTimeout: 100,
+    //         ignored: /node_modules/
+    //     }
+    // },
 
     watch: true,
 

@@ -48,7 +48,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
+                test: /\.pcss$/,
                 loader: ExtractTextPlugin.extract({ fallback: 'style', use: 'css?importLoaders=1!postcss-loader' })
             },
             {
@@ -85,7 +85,7 @@ module.exports = {
             }
         }),
         new OptimizeCssAssetsPlugin({
-            assetNameRegExp: /\.css$/g,
+            assetNameRegExp: /\.pcss$/g,
             cssProcessor: require('cssnano'),
             cssProcessorOptions: { discardComments: { removeAll: true } },
             canPrint: true

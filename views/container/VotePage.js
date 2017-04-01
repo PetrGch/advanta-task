@@ -1,13 +1,12 @@
 import { connect } from 'react-redux';
 import * as pageActions from '../redux/actions/index';
-import Form from '../components/Form/From';
+import Vote from '../components/modules/page/vote/Vote';
 import { bindActionCreators } from 'redux';
 
 const mapStateToProps = (state) => {
+    // console.log(state);
     return {
-        getCity: state.getCity,
-        checkLenght: state.checkLenght,
-        selectedCity: state.selectCity
+        data: state.getData
     }
 };
 
@@ -17,9 +16,9 @@ const mapDispatchToProps = (dispatch) => {
     }
 };
 
-const AutocompliteCity = connect(
+const VotePage= connect(
     mapStateToProps,
     mapDispatchToProps
-)(Form);
+)(Vote);
 
-export default AutocompliteCity;
+export default VotePage;
